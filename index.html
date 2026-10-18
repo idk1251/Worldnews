@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breaking News Bot</title>
+<style>
+/* Layout: single readable column, red badge header like the app icon, quiet legal body */
+:root{--bg:#fbfafa;--fg:#1d1a1f;--muted:#5d5862;--line:#e6e1e5;--accent:#d61a4b;--badge-fg:#fff;
+--display:"Archivo","Arial Narrow",Arial,sans-serif;--body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151317;--fg:#ece8ee;--muted:#a59fab;--line:#2c2830;--accent:#ff4d78;--badge-fg:#151317;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#151317;--fg:#ece8ee;--muted:#a59fab;--line:#2c2830;--accent:#ff4d78;--badge-fg:#151317;color-scheme:dark}
+html{color-scheme:light}body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.65;
+padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:42rem;margin:0 auto;padding-block:48px 64px;display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.badge{align-self:flex-start;background:var(--accent);color:var(--badge-fg);font-family:var(--display);font-weight:800;
+letter-spacing:.08em;text-transform:uppercase;font-size:.75rem;padding:4px 12px;border-radius:999px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.1;margin:0;text-wrap:balance}
+.meta{color:var(--muted);font-size:.9rem;margin:0}
+section{display:flex;flex-direction:column;gap:8px}
+h2{font-family:var(--display);font-weight:700;font-size:1.2rem;margin:0;text-wrap:balance}
+p,ul{margin:0}ul{padding-left:1.2rem;display:flex;flex-direction:column;gap:4px}
+a{color:var(--accent)}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:20px}
+
+.lead{font-size:1.15rem;color:var(--muted);max-width:36rem}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));gap:12px}
+.steps li{border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.steps b{font-family:var(--display);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+.links a{font-weight:600}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Public+Sans:wght@400;600&display=swap">
+
+</head>
+<body>
+<main>
+<header><span class="badge">Desktop app</span><h1>Breaking News Bot</h1>
+<p class="lead">A personal desktop app that turns verified breaking news into short TikTok videos and photo slides, and uploads the videos to its owner's own TikTok account.</p></header>
+<section><h2>How it works</h2>
+<ol class="steps">
+<li><b>Step 1</b>Reads headlines from public news sites every 30 minutes.</li>
+<li><b>Step 2</b>Picks only major stories and confirms them with several sources.</li>
+<li><b>Step 3</b>Makes a video with photos, captions and narration, or a photo slideshow.</li>
+<li><b>Step 4</b>Uploads the video to the owner's TikTok through TikTok's official Content Posting API.</li>
+</ol></section>
+<section><h2>TikTok integration</h2>
+<p>The app uses TikTok Login Kit so the owner can connect their own account, and the Content Posting API to send videos to their TikTok inbox as drafts or post them directly. Every post is labeled as AI-generated content. The app does not access other users' accounts or data.</p></section>
+<section><h2>Legal</h2>
+<div class="links"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></div></section>
+<footer>Breaking News Bot is a personal desktop app made by an individual developer. It is not affiliated with or endorsed by TikTok.</footer>
+</main>
+</body>
+</html>
